@@ -3,9 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Lista eventos</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/navegar.js"></script>
+    <script src="js/cargar_modo_oscuro.js"></script>
 </head>
 <body>
+    <script>
+        const temaElegido = localStorage.getItem("darkMode");
+        document.body.classList[temaElegido === "dark" ? "add" : "remove"]("darkMode");
+    </script>
+    <div class="header" id="myHeader">
+        <a href="index.html" id="logoIndra"><b>indra</b></a>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="listaeventos.html">Lista eventos</a></li>
+            <li><a href="#">Perfil</a></li>
+            <li>
+                <div class="darkMode">
+                    <button class="darkModeButton" onclick="botonModoOscuro()"></button>
+                </div>
+            </li>
+        </ul>
+    </div>
+    
     Eventos
 </body>
 </html>

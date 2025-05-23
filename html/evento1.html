@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento 1</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <script src="js/navegar.js"></script>
+    <script src="js/cargar_modo_oscuro.js"></script>
+</head>
+<body>
+    <script>
+        const temaElegido = localStorage.getItem("darkMode");
+        document.body.classList[temaElegido === "dark" ? "add" : "remove"]("darkMode");
+    </script>
+    <div class="header" id="myHeader">
+        <a href="index.html" id="logoIndra"><b>indra</b></a>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="listaeventos.html">Lista eventos</a></li>
+            <li><a href="#">Perfil</a></li>
+            <li>
+                <div class="darkMode">
+                    <button class="darkModeButton" onclick="botonModoOscuro()"></button>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="card-wrapper-wrapper">
+    <div class="card-wrapper">
+        <!-- <h1>Portal de eventos sostenibles</h1>
+        <p>En este portal se gestiona todo lo relacionado con los eventos sostenibles apoyados por la empresa indra.</p> -->
+        <h2 id="eventosdestacados">Detalle evento</h2>
+        <ul class="card-list" id="listatarjetas">
+            <li class="card-item">
+                <div class="card-link detalle">
+                    <img src="images/evento1.jpg" alt="Evento 1" class="card-image">
+                    <div class="card-badgefecha">
+                        <p class="badge taller">Taller</p>
+                        <div class="badge fecha">
+                            <span class="material-symbols-outlined">event</span>
+                            <p class="card-fecha">12 May 11:00</p>
+                        </div>
+                    </div>
+                    <h2 class="card-title">Tecnologias sostenibles en Coruña</h2>
+                    <p>Ubicacion: ExpoCoruña, A Coruña, Galicia</p>
+                    <p>Impartidores: Alexa Mata, Miguel Naya</p>
+                    <p>Organizador: Rediwi S.A.</p>
+                    <button class="card-button" style="font-size: 14px;">Apuntarse</button>
+                </div>
+            </li>
+            <li class="card-item">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed iure, deleniti vero iste aliquid obcaecati modi optio temporibus nisi sit quasi! Recusandae eaque delectus repellendus deleniti adipisci magni voluptates nesciunt?
+            </li>
+        </ul>
+    </div>
+    </div>
+</body>
+</html>

@@ -1,36 +1,139 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eventos sostenibles</title>
+    <title>Portal Actividades</title>
+    <!-- Importar iconos google (calendario, flechas) -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js"></script>
+    <script src="js/navegar.js"></script>
+    <script src="js/cargar_modo_oscuro.js"></script>
 </head>
 <body>
+    <script>
+        const temaElegido = localStorage.getItem("darkMode");
+        document.body.classList[temaElegido === "dark" ? "add" : "remove"]("darkMode");
+    </script>
+    <div class="header" id="myHeader">
+        <a href="index.html" id="logoIndra"><b>indra</b></a>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="listaeventos.html">Lista eventos</a></li>
+            <li><a href="#">Perfil</a></li>
+            <li>
+                <div class="darkMode">
+                    <button class="darkModeButton" onclick="botonModoOscuro()"></button>
+                </div>
+            </li>
+        </ul>
+    </div>
 
-<section class="container">
-	<div class="slider-wrapper">
-		<div class="slider">
-            <div class="slide" id="slide-1">
-                <img src="images/evento1.jpg"/>
-                <a href="listaeventos.html"><b>Exposicion tecnologias sostenibles ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</b></a>
-            </div>
-            <div class="slide" id="slide-2">
-                <img src="images/evento2.jpg"/>
-                <a href="listaeventos.html"><b>Evento 2</b></a>
-            </div>
-            <div class="slide" id="slide-3">
-                <img src="images/evento3.jpg"/>
-                <a href="listaeventos.html"><b>Evento 3</b></a>
-            </div>
-		</div>
-		<div class="slider-nav">
-			<a href="#slide-1"></a>
-			<a href="#slide-2"></a>
-			<a href="#slide-3"></a>
-		</div>
-	</div>
-</section>
+    <div class="titulo-pagina">
+        <h1>Página de inicio</h1>
+    </div>
+    
+    <div class="card-wrapper-wrapper">
+    <div class="card-wrapper">
+        <h2 id="eventosdestacados">Eventos destacados</h2>
+        <ul class="card-list" id="listatarjetas">
+            <li class="card-item">
+                <div class="card-link">
+                    <img src="images/evento1.jpg" alt="Evento 1" class="card-image">
+                    <div class="card-badgefecha">
+                        <p class="badge taller">Taller</p>
+                        <div class="badge fecha">
+                            <span class="material-symbols-outlined">event</span>
+                            <p class="card-fecha">12 May 11:00</p>
+                        </div>
+                    </div>
+                    <div class="tituloboton">
+                        <h2 class="card-title">Tecnologias sostenibles en Coruña</h2>
+                        <button class="card-button" onclick="document.location = 'evento1.html'">Ver mas</button>
+                    </div>
+                </div>
+            </li>
+            <li class="card-item">
+                <div class="card-link">
+                    <img src="images/evento2.jpg" alt="Evento 2" class="card-image">
+                    <div class="card-badgefecha">
+                        <p class="badge conferencia">Conferencia</p>
+                        <div class="badge fecha">
+                            <span class="material-symbols-outlined">event</span>
+                            <p class="card-fecha">30 May 12:30</p>
+                        </div>
+                    </div>
+                    <div class="tituloboton">
+                        <h2 class="card-title">sdfsasd</h2>
+                        <button class="card-button" onclick="document.location = 'evento1.html'">Ver mas</button>
+                    </div>
+                </div>
+            </li>
+            <li class="card-item">
+                <div class="card-link">
+                    <img src="images/evento1.jpg" alt="Evento 1" class="card-image">
+                    <div class="card-badgefecha">
+                        <p class="badge taller">Taller</p>
+                        <div class="badge fecha">
+                            <span class="material-symbols-outlined">event</span>
+                            <p class="card-fecha">12 May - 15 May</p>
+                        </div>
+                    </div>
+                    <div class="tituloboton">
+                        <h2 class="card-title">sdfsasd</h2>
+                        <button class="card-button" onclick="document.location = 'evento1.html'">Ver mas</button>
+                    </div>
+                </div>
+            </li>
+            <li class="card-item">
+                <div class="card-link">
+                    <img src="images/evento1.jpg" alt="Evento 1" class="card-image">
+                    <div class="card-badgefecha">
+                        <p class="badge taller">Taller</p>
+                        <div class="badge fecha">
+                            <span class="material-symbols-outlined">event</span>
+                            <p class="card-fecha">12 May - 15 May</p>
+                        </div>
+                    </div>
+                    <div class="tituloboton">
+                        <h2 class="card-title">sdfsasd</h2>
+                        <button class="card-button" onclick="document.location = 'evento1.html'">Ver mas</button>
+                    </div>
+                </div>
+            </li>
+            <li class="card-item">
+                <div class="card-link">
+                    <img src="images/evento1.jpg" alt="Evento 1" class="card-image">
+                    <div class="card-badgefecha">
+                        <p class="badge taller">Taller</p>
+                        <div class="badge fecha">
+                            <span class="material-symbols-outlined">event</span>
+                            <p class="card-fecha">12 May - 15 May</p>
+                        </div>
+                    </div>
+                    <div class="tituloboton">
+                        <h2 class="card-title">sdfsasd</h2>
+                        <button class="card-button" onclick="document.location = 'evento1.html'">Ver mas</button>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <button id="listaIzquierda"><span class="material-symbols-outlined">arrow_back</span></button>
+        <button id="listaDerecha"><span class="material-symbols-outlined">arrow_forward</span></button>
+        <div class="cuadradoblanco"></div>
+        <div class="cuadradoblanco2"></div>
+    </div>
+    </div>
+    <br>
+    <div class="titulo-pagina">
+        <h3>Quienes somos?</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi consequuntur suscipit minus aspernatur delectus labore ea. Laborum, dolor neque autem, quod perspiciatis in fugit cupiditate omnis cum quo earum necessitatibus?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, tempora minima inventore, a earum vel aspernatur explicabo voluptate praesentium, eveniet labore amet? Atque, fugiat? Laudantium eaque qui laboriosam. In, exercitationem.</p>
+        <h3>Qué hacemos?</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum nulla, a, non aspernatur ipsum tempora molestias facilis impedit explicabo iste facere totam exercitationem itaque ullam sint consequuntur incidunt, praesentium fugit?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint quo autem doloremque delectus aspernatur, qui repudiandae soluta animi natus eius pariatur iste eos officia repellendus fugit quam fuga commodi distinctio.</p>
 
+    </div>
 </body>
 </html>
