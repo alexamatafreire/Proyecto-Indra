@@ -160,6 +160,11 @@ html,body {
     background: rgb(255, 198, 198);
 }
 
+.card-list .card-link .badge.convencion {
+    color: rgb(40, 74, 168);
+    background: rgb(198, 229, 255);
+}
+
 /*FIN TIPOS DE MEDALLAS*/
 
 .card-list .card-link .card-title {
@@ -382,4 +387,65 @@ html,body {
 
 .card-list .card-item .card-link.detalle {
     height: fit-content;
+}
+
+/* Lista de eventos */
+
+.card-list.listaEventos .card-item .card-link.tarjetaListaEventos {
+    display: flex;
+    max-width: 64rem;
+    width: 300vh;
+    height: fit-content;
+    background: var(--color-tarjetas);
+    padding: 18px;
+    border-radius: 12px;
+    border: 2px solid transparent;
+    text-decoration: none;
+    box-shadow: 0 0 15px var(--color-sombra-tarjeta);
+    transition: border 0.2s ease;
+}
+
+.card-list.listaEventos .card-item .card-link.tarjetaListaEventos:hover {
+    border-color: var(--color-hover-tarjeta);
+    cursor: pointer;
+}
+
+.card-list.listaEventos .card-link .card-image {
+    max-width: 300px;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 1.5rem;
+}
+
+.card-link.tarjetaListaEventos .tituloboton {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    gap: 1rem;
+    width: 100%;
+    align-items: center;
+}
+
+.card-list.listaEventos .card-item {
+    list-style: none;
+    width: auto;
+    margin-right: 25px;
+    margin-bottom: 15px;
+}
+
+.card-list.listaEventos .card-link .card-badgefecha {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+.card-list.listaEventos {
+    display: flex;
+    flex-direction: column;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-top: 15px;
+    padding-bottom: 10px;
 }
